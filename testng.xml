@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="MyParameters">
+<!--<test name="ParameterizedTest">
+        <parameter name="username" value="user123"/>
+        <parameter name="password" value="password123"/>
+         Add more parameters if needed 
+        <classes>
+            <class name="Practice.ParameterizedTest"/>
+        </classes>
+    </test>
+    
+	<listeners>
+        <listener class-name="Practice.Listeners"/>
+    </listeners>
+         <test name="Test1" parallel="tests" thread-count="2">
+        <classes>
+            <class name="Practice.TestNGBeforeAfter"/>
+        </classes>
+    </test>
+   <test name="Test2" parallel="tests" thread-count="2">
+        <classes>
+            <class name="com.example.TestClass2"/>
+        </classes>
+    </test>
+
+
+    <test name="SmokeTests">
+        <groups>
+            <run>
+                <include name="smoke" />
+            </run>
+        </groups>
+        <classes>
+            <class name="Practice.TestNGBeforeAfter" />
+        </classes>
+    </test>-->
+    <test name="RegressionTests" parallel="methods" thread-count="2">
+        <groups>
+            <run>
+                <include name="regression" />
+            </run>
+        </groups>
+        <classes>
+            <class name="Practice.TestNGBeforeAfter" />
+        </classes>
+    </test>
+</suite>
